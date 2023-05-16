@@ -10,31 +10,45 @@ import Combine
 
 class PetViewModel: ObservableObject {
     private var cancallables = Set<AnyCancellable>()
-    @Published public private(set) var arrOfPets = PassthroughSubject<PetsModel, Never>()
+    private let output: PassthroughSubject<Output, Never> = .init()
+
     public enum Input {
         case getPets
     }
-    @Published public var input: Input?
+    
+    enum Output {
+      case fetchApiDataDidFail(error: Error)
+      case fetchApiDataDidSucceed(petsModel: PetsModel)
+    }
+    
 
-    init() {
-        $input.compactMap{$0}.sink{ [unowned self] action in
-            switch action {
-            case .getPets:
-                PetNetworkHelper.getAllPetsList {[unowned self] result in
-                    switch result {
-                    case .success(let allPets):
-                        DispatchQueue.main.async { [unowned self] in
-                            self.arrOfPets.send(allPets)
-                            debugPrint("View Model Data Receievd: \(allPets.pets)")
-                        }
-                    case .failure(let error):
-                        debugPrint(error.localizedDescription)
-                    }
-                }            }
-        } .store(in: &cancallables)
+    init() { }
+    
+    func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
+      input.sink { [weak self] event in
+        switch event {
+        case .getPets:
+          self?.getAllPets()
+        }
+      }.store(in: &cancallables)
+      return output.eraseToAnyPublisher()
     }
     
     
+    private func getAllPets() -> Void {
+        PetNetworkHelper.getAllPetsList {[unowned self] result in
+            switch result {
+            case .success(let allPets):
+                DispatchQueue.main.async { [unowned self] in
+                    self.output.send(.fetchApiDataDidSucceed(petsModel: allPets))
+                    debugPrint("View Model Data Receievd: \(allPets.pets)")
+                }
+            case .failure(let error):
+                self.output.send(.fetchApiDataDidFail(error: error))
+                debugPrint(error.localizedDescription)
+            }
+        }
+    }
     
     
     deinit {

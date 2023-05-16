@@ -20,7 +20,6 @@
 		4AF0E5BA2A1116D2004D5E30 /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5B92A1116D2004D5E30 /* PetViewModel.swift */; };
 		4AF0E5BD2A111764004D5E30 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5BC2A111764004D5E30 /* NetworkHelper.swift */; };
 		4AF0E5C02A111887004D5E30 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5BF2A111887004D5E30 /* ErrorHandler.swift */; };
-		4AF0E5C22A112C71004D5E30 /* testfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5C12A112C71004D5E30 /* testfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		4AF0E5B92A1116D2004D5E30 /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		4AF0E5BC2A111764004D5E30 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		4AF0E5BF2A111887004D5E30 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
-		4AF0E5C12A112C71004D5E30 /* testfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +118,6 @@
 				4AF0E58E2A11153E004D5E30 /* Assets.xcassets */,
 				4AF0E5902A11153E004D5E30 /* LaunchScreen.storyboard */,
 				4AF0E5932A11153E004D5E30 /* Info.plist */,
-				4AF0E5C12A112C71004D5E30 /* testfile.swift */,
 			);
 			path = CombineUiTableView;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF0E58A2A11153B004D5E30 /* ViewController.swift in Sources */,
-				4AF0E5C22A112C71004D5E30 /* testfile.swift in Sources */,
 				4AF0E5C02A111887004D5E30 /* ErrorHandler.swift in Sources */,
 				4AF0E5BA2A1116D2004D5E30 /* PetViewModel.swift in Sources */,
 				4AF0E5862A11153B004D5E30 /* AppDelegate.swift in Sources */,
