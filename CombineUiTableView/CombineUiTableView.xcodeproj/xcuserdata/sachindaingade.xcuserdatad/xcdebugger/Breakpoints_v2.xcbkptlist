@@ -3,4 +3,69 @@
    uuid = "24A97B03-F9AC-4AA5-BD20-F1FAEE452022"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1489E1B-8479-4086-BAD8-146B92D3CEBC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CombineUiTableView/ViewModels/PetViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "PetViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F1489E1B-8479-4086-BAD8-146B92D3CEBC - c75c710c3a31c1e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CombineUiTableView.PetViewModel.getAllPets() -&gt; ()"
+                  moduleName = "CombineUiTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac/Design%20Patterns/18%20Combine%20UITableView%20/Combine-UITableView/CombineUiTableView/CombineUiTableView/ViewModels/PetViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "F1489E1B-8479-4086-BAD8-146B92D3CEBC - c75c710c3a31c1e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CombineUiTableView.PetViewModel.getAllPets() -&gt; ()"
+                  moduleName = "CombineUiTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac/Design%20Patterns/18%20Combine%20UITableView%20/Combine-UITableView/CombineUiTableView/CombineUiTableView/ViewModels/PetViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "F1489E1B-8479-4086-BAD8-146B92D3CEBC - 43e38df4862dca7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;CombineUiTableView.PetsModel, Swift.Error&gt;) -&gt; () in CombineUiTableView.PetViewModel.getAllPets() -&gt; ()"
+                  moduleName = "CombineUiTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Mac/Design%20Patterns/18%20Combine%20UITableView%20/Combine-UITableView/CombineUiTableView/CombineUiTableView/ViewModels/PetViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "255">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

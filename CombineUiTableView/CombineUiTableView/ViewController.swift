@@ -10,37 +10,38 @@ import Combine
 
 class ViewController: UIViewController {
     private var cancallables = Set<AnyCancellable>()
-
     @IBOutlet weak var petsTableView: UITableView!
     
-    private var viewModel = PetViewModel()
-    private let input: PassthroughSubject<PetViewModel.Input, Never> = .init()
-    private var arrOfPets = [Pet]()
+     private var viewModel = PetViewModel()
+  //  private let input: PassthroughSubject<PetViewModel.Input, Never> = .init()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Test"
-        self.bind()
+      //  self.bind()
           
+        viewModel.arrPets.compactMap{$0}.sink { _ in
+            self.petsTableView?.reloadData()
+        }.store(in: &cancallables)
     }
 
-    private func bind() {
-      let output = viewModel.transform(input: input.eraseToAnyPublisher())
-      output
-        .receive(on: DispatchQueue.main)
-        .sink { [weak self] event in
-        switch event {
-        case .fetchApiDataDidFail(error: let error):
-            debugPrint(error.localizedDescription)
-        case .fetchApiDataDidSucceed(petsModel: let petsModel):
-            self?.arrOfPets = petsModel.pets
-            DispatchQueue.main.async { [weak self] in
-                self?.petsTableView.reloadData()
-            }
-        }
-      }.store(in: &cancallables)
-      
-    }
+//    private func bind() {
+//      let output = viewModel.transform(input: input.eraseToAnyPublisher())
+//      output
+//        .receive(on: DispatchQueue.main)
+//        .sink { [weak self] event in
+//        switch event {
+//        case .fetchApiDataDidFail(error: let error):
+//            debugPrint(error.localizedDescription)
+//        case .fetchApiDataDidSucceed(petsModel: let petsModel):
+//            self?.arrOfPets = petsModel.pets
+//            DispatchQueue.main.async { [weak self] in
+//                self?.petsTableView.reloadData()
+//            }
+//        }
+//      }.store(in: &cancallables)
+//
+//    }
   
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -48,21 +49,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonGetDataAction(_ sender: Any) {
-        input.send(.getPets)
+        viewModel.input = .getPets
+      
     }
 }
 
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrOfPets.count
+        return viewModel.arrPets.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = arrOfPets[indexPath.row]
+        let model = viewModel.arrPets.value[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         cell.textLabel?.text = model.title
-        
         return cell
 
     }
