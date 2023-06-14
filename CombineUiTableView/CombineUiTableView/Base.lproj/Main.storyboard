@@ -16,19 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4K-HW-Wh8">
-                                <rect key="frame" x="299" y="103" width="75" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="UTg-aV-6eO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buttonGetDataAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="boD-6x-AYa"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UjG-Dz-QLF">
-                                <rect key="frame" x="0.0" y="142" width="390" height="702"/>
+                                <rect key="frame" x="0.0" y="92" width="390" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="iTY-J1-Ri6">
@@ -42,7 +31,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="13q-jh-KPX"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B8y-SD-aeA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SPF-wk-Hfw"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -50,17 +39,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="UjG-Dz-QLF" secondAttribute="bottom" id="Dlc-h5-aoY"/>
-                            <constraint firstItem="E4K-HW-Wh8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="N9o-X6-u9g"/>
-                            <constraint firstItem="E4K-HW-Wh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="299" id="SxV-vt-BQE"/>
                             <constraint firstItem="UjG-Dz-QLF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UfL-Rg-u72"/>
-                            <constraint firstItem="UjG-Dz-QLF" firstAttribute="top" secondItem="E4K-HW-Wh8" secondAttribute="bottom" constant="4" id="WK7-iK-0Aq"/>
-                            <constraint firstItem="UjG-Dz-QLF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="bE5-IX-Zv6"/>
+                            <constraint firstItem="UjG-Dz-QLF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="bE5-IX-Zv6"/>
                             <constraint firstItem="UjG-Dz-QLF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fyX-c5-dXs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E4K-HW-Wh8" secondAttribute="trailing" id="hal-8y-0cq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="39G-Xl-wkG"/>
+                    <navigationItem key="navigationItem" id="39G-Xl-wkG">
+                        <barButtonItem key="rightBarButtonItem" title="GetPets" id="P64-JC-3RZ">
+                            <connections>
+                                <action selector="buttonGetDataAction:" destination="BYZ-38-t0r" id="8nv-XF-l92"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="petsTableView" destination="UjG-Dz-QLF" id="iQR-0d-c3N"/>
@@ -68,7 +59,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516.92307692307691" y="32.701421800947863"/>
+            <point key="canvasLocation" x="406" y="33"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="frE-Te-tgB">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="1qS-5h-86Y" customClass="DetailViewController" customModule="CombineUiTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZV-8S-vKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VGO-2k-54B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSm-ok-WbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PjR-cw-OL3">

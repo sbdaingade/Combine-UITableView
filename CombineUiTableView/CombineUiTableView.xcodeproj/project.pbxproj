@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AAE2FE42A357ED8008CAB3E /* LoaderUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE2FE32A357ED8008CAB3E /* LoaderUtil.swift */; };
+		4AAE2FE62A357F56008CAB3E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE2FE52A357F55008CAB3E /* LoadingState.swift */; };
+		4AC24C882A3A0A30008C4A3F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC24C872A3A0A30008C4A3F /* DetailViewController.swift */; };
 		4AF0E5862A11153B004D5E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5852A11153B004D5E30 /* AppDelegate.swift */; };
 		4AF0E5882A11153B004D5E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5872A11153B004D5E30 /* SceneDelegate.swift */; };
 		4AF0E58A2A11153B004D5E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0E5892A11153B004D5E30 /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4AAE2FE32A357ED8008CAB3E /* LoaderUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUtil.swift; sourceTree = "<group>"; };
+		4AAE2FE52A357F55008CAB3E /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		4AC24C872A3A0A30008C4A3F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AF0E5822A11153B004D5E30 /* CombineUiTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineUiTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF0E5852A11153B004D5E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF0E5872A11153B004D5E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AAE2FE22A357EB7008CAB3E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4AAE2FE32A357ED8008CAB3E /* LoaderUtil.swift */,
+				4AAE2FE52A357F55008CAB3E /* LoadingState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4AC24C862A3A0A19008C4A3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AF0E5892A11153B004D5E30 /* ViewController.swift */,
+				4AC24C872A3A0A30008C4A3F /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4AF0E5792A11153B004D5E30 = {
 			isa = PBXGroup;
 			children = (
@@ -107,13 +131,14 @@
 		4AF0E5842A11153B004D5E30 /* CombineUiTableView */ = {
 			isa = PBXGroup;
 			children = (
+				4AC24C862A3A0A19008C4A3F /* Views */,
+				4AAE2FE22A357EB7008CAB3E /* Utils */,
 				4AF0E5BE2A111873004D5E30 /* ErrorHandler */,
 				4AF0E5BB2A11174F004D5E30 /* NetworkHelper */,
 				4AF0E5B62A111617004D5E30 /* ViewModels */,
 				4AF0E5B52A11160C004D5E30 /* Models */,
 				4AF0E5852A11153B004D5E30 /* AppDelegate.swift */,
 				4AF0E5872A11153B004D5E30 /* SceneDelegate.swift */,
-				4AF0E5892A11153B004D5E30 /* ViewController.swift */,
 				4AF0E58B2A11153B004D5E30 /* Main.storyboard */,
 				4AF0E58E2A11153E004D5E30 /* Assets.xcassets */,
 				4AF0E5902A11153E004D5E30 /* LaunchScreen.storyboard */,
@@ -302,11 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAE2FE42A357ED8008CAB3E /* LoaderUtil.swift in Sources */,
 				4AF0E58A2A11153B004D5E30 /* ViewController.swift in Sources */,
 				4AF0E5C02A111887004D5E30 /* ErrorHandler.swift in Sources */,
 				4AF0E5BA2A1116D2004D5E30 /* PetViewModel.swift in Sources */,
 				4AF0E5862A11153B004D5E30 /* AppDelegate.swift in Sources */,
 				4AF0E5882A11153B004D5E30 /* SceneDelegate.swift in Sources */,
+				4AAE2FE62A357F56008CAB3E /* LoadingState.swift in Sources */,
+				4AC24C882A3A0A30008C4A3F /* DetailViewController.swift in Sources */,
 				4AF0E5BD2A111764004D5E30 /* NetworkHelper.swift in Sources */,
 				4AF0E5B82A11167A004D5E30 /* PetsModel.swift in Sources */,
 			);
